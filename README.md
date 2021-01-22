@@ -1,4 +1,4 @@
-# awsdrone
+# awsdrones
 $ pipenv --python 3.8
 
 # Used AWS Zone  ---- >>>> us-east-1
@@ -35,6 +35,7 @@ Commands:
 
 
 #####################################
+
 python s3dron/s3dron.py setup-bucket automatingdomain-boto3
 
 python s3dron/s3dron.py --help
@@ -50,6 +51,7 @@ python s3dron/s3dron.py --profile=boto3dev setup-domain test.servicediscover.loc
 python s3dron/s3dron.py --profile=boto3dev  find-cert test2.domain.com
 
 ############################ Prod Test ################################
+
 python s3dron/s3dron.py --profile=boto3dev setup-bucket test2.domain.com
 
 python s3dron/s3dron.py --profile=boto3dev list-buckets
@@ -62,7 +64,9 @@ python s3dron/s3dron.py --profile=boto3dev  find-cert test2.domain.com
 
 
 #  Create 100 mb file to test upload sync time for old files it must skipp old files
+
 $ dd if=/dev/zero of=test.img bs=1024 count=0 seek=$[1024*100]
 
-############# ServerLess ###############
+# ServerLess 
+
 $ serverless create --template aws-python3  --name alertdron-alerts
