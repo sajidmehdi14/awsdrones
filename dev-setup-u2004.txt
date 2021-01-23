@@ -1,0 +1,26 @@
+
+Installing EKS & IDEs:
+
+#####################
+
+Install atom, pycharm, iteliJ Idea & vscode with snap
+
+Install Packages:
+
+#################
+
+sudo apt install python3-pip nodejs npm git openssh-server
+
+pip3 install pipenv
+
+# update ~/.local/bin PATH in .bashrc
+
+pipenv install boto3
+
+pipenv install click
+
+pipenv install -d ipython
+
+pipenv run ipython
+
+pipenv shell
