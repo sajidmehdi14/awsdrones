@@ -8,7 +8,7 @@ key = ec2.create_key_pair(KeyName=key_name)
 key.key_material
 with open(key_path, 'w') as key_file:
     key_file.write(key.key_material)
-    
+
 get_ipython().run_line_magic('ls', '-al')
 get_ipython().run_line_magic('ls', '-altr')
 import os, stat
@@ -18,14 +18,14 @@ ec2.images.filter(Owners=['amazon'])
 list(ec2.images.filter(Owners=['amazon']))
 
 
-/*
-img  = ec2.Image('ami-0323c3dd2da7fb37d')
-img.name
-ec2_apse2 = session.resource('ec2', region_name='ap-southeast-2')
-img_apse2  = ec2_apse2.Image('ami-0323c3dd2da7fb37d')
-img_apse2.name
-img.name
-*/
+
+# img  = ec2.Image('ami-0323c3dd2da7fb37d')
+# img.name
+# ec2_apse2 = session.resource('ec2', region_name='ap-southeast-2')
+# img_apse2  = ec2_apse2.Image('ami-0323c3dd2da7fb37d')
+# img_apse2.name
+# img.name
+
 
 
 
@@ -94,4 +94,3 @@ sg.authorize_ingress(IpPermissions=[{'FromPort': 80, 'ToPort': 80, 'IpProtocol':
 
 
 get_ipython().run_line_magic('history', '')
-
