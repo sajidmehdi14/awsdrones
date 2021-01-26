@@ -135,3 +135,6 @@ config.dev.json
 .vscode
 .idea
 config.dev.json
+
+# sam
+.aws-sam
