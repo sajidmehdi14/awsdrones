@@ -1,0 +1,6 @@
+{
+  "alerts": {
+    "slack_webhook_url": "",
+    "profile": "default"
+  }
+}

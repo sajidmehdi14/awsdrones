@@ -24,10 +24,8 @@ provider:
   name: aws
   runtime: python3.8
   lambdaHashingVersion: 20201221
-  profile: ${file(../config.${self:provider.stage}.json):alerts.profile}
+  profile: default
   region: us-east-1
-  environment:
-    SLACK_WEBHOOK_URL: ${file(../config.${self:provider.stage}.json):alerts.slack_webhook_url}
 
 # you can overwrite defaults here
 #  stage: dev
@@ -63,8 +61,8 @@ provider:
 #    - exclude-me-dir/**
 
 functions:
-  post-to-slack:
-    handler: handler.post_to_slack
+  hello:
+    handler: handler.hello
     events:
       - cloudwatchEvent:
           event:
