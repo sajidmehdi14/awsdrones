@@ -134,3 +134,4 @@ config.dev.json
 *.pem
 .vscode
 .idea
+config.dev.json
